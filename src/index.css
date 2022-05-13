@@ -1,0 +1,72 @@
+/** @format */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .credit_card {
+        @apply absolute top-0 -translate-y-1/2 position-x-center rounded-xl overflow-hidden drop-shadow-2xl font-Source duration-300 ease-in-out;
+        @apply w-11/12 xs:w-9/12 max-w-[336px] h-[215px];
+    }
+    .credit_card_face {
+        @apply absolute top-0 bg-card-bg bg-cover w-full h-full duration-500 shadow-2xl;
+        perspective: 1000px;
+        backface-visibility: hidden;
+    }
+    .credit_card-front {
+        transform: rotateY(180deg);
+    }
+    .credit_card-back {
+        transform: rotateY(-180deg);
+    }
+    .credit_card-active {
+        transform: rotateY(0deg);
+    }
+    .credit_card_chip {
+        @apply w-[16%] pb-[13%] bg-card-chip bg-cover bg-no-repeat absolute left-4 top-4;
+    }
+    .credit_card_organization {
+        @apply bg-contain bg-no-repeat absolute;
+    }
+    .credit_card_number {
+        @apply text-white  absolute position-y-center left-1.5 px-2.5 py-0.5 rounded duration-300 border-2 border-solid border-transparent;
+        @apply text-base xs:text-xl;
+    }
+    .credit_card_holder {
+        @apply text-white py-1.5 px-2.5 rounded flex-1 duration-300 border-2 border-solid border-transparent;
+    }
+    .credit_card_expires {
+        @apply text-white py-1.5 pl-2.5;
+    }
+    .credit_card_cvv {
+        @apply w-full px-3 text-right absolute position-y-center;
+    }
+    .credit_card_cvv_label {
+        @apply text-white text-sm mr-2;
+    }
+    .cardit_card_cvv_input {
+        @apply w-full h-[40px] px-2 py-2.5 leading-4 bg-white rounded-md;
+    }
+    .credit_card_input-active {
+        @apply border-gray-100 bg-black/20;
+    }
+    .form-wrapper {
+        @apply w-28 max-w-[90%] relative bg-white mx-auto mt-[145px] rounded-lg shadow-xl;
+    }
+    .custom-form-label {
+        @apply block text-xs mb-0.5 tracking-tight text-blue-300;
+    }
+    .custom-form-input,
+    .custom-form-select {
+        @apply text-sm w-full rounded text-blue-300 focus:shadow-lg focus:ring-0 focus:outline-none duration-300 py-1.5 px-2;
+    }
+}
+
+@layer utilities {
+    .position-x-center {
+        @apply left-1/2 -translate-x-1/2;
+    }
+    .position-y-center {
+        @apply top-1/2 -translate-y-1/2;
+    }
+}

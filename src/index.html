@@ -1,0 +1,144 @@
+<!-- @format -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body class="bg-blue-100">
+        <div class="form-wrapper">
+            <div class="credit_card">
+                <div
+                    class="credit_card_face credit_card-front credit_card-active"
+                >
+                    <figure class="credit_card_chip"></figure>
+                    <figure
+                        class="credit_card_organization bg-card-org-visa w-[23%] pb-[13%] top-4 right-4"
+                    ></figure>
+                    <p class="credit_card_number js-credit_card_number">
+                        #### #### #### ####
+                    </p>
+                    <div
+                        class="flex w-full absolute bottom-4 pr-4 pl-1.5 leading-none"
+                    >
+                        <div class="credit_card_holder">
+                            <p class="text-xs text-blue-100 xs:mb-1">
+                                Card Holder
+                            </p>
+                            <p
+                                class="text-sm xs:text-base js-credit_card_holder"
+                            >
+                                FULL NAME
+                            </p>
+                        </div>
+                        <div class="credit_card_expires">
+                            <p class="text-xs text-blue-100 xs:mb-1">Expires</p>
+                            <p class="text-sm xs:text-base">
+                                <span class="js-credit_card_month">MM</span
+                                >/<span class="js-credit_card_year">YY</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="credit_card_face credit_card-back">
+                    <div
+                        class="w-full h-[40px] bg-black/80 relative top-6"
+                    ></div>
+                    <div class="credit_card_cvv">
+                        <span class="credit_card_cvv_label">CVV</span>
+                        <div
+                            class="cardit_card_cvv_input js-cardit_card_cvv_input"
+                        >
+                            **
+                        </div>
+                    </div>
+                    <figure
+                        class="credit_card_organization bg-card-org-visa w-[70px] h-[40px] bottom-4 right-4 opacity-80"
+                    ></figure>
+                </div>
+            </div>
+            <form class="pt-[150px] pb-10 mx-6" action="">
+                <div class="mb-3.5">
+                    <label for="cardNumber" class="custom-form-label">
+                        Card Number
+                    </label>
+                    <input
+                        type="text"
+                        class="custom-form-input"
+                        id="cardNumber"
+                        placeholder="請輸入卡號"
+                        inputmode="numeric"
+                        autocomplete="off"
+                        data-format="#### #### #### ####"
+                        data-token="#"
+                    />
+                </div>
+                <div class="mb-3.5">
+                    <label for="cardHolder" class="custom-form-label">
+                        Card Holders
+                    </label>
+                    <input
+                        type="text"
+                        class="custom-form-input"
+                        id="cardHolder"
+                        placeholder="持有人"
+                        inputmode="text"
+                        autocomplete="off"
+                    />
+                </div>
+                <div class="mb-[30px] flex justify-between">
+                    <div class="flex items-end w-[62%] mr-[8%]">
+                        <div class="w-full mr-3">
+                            <label
+                                for="expirationMonth"
+                                class="custom-form-label"
+                            >
+                                Expiration Date
+                            </label>
+                            <select
+                                name="expirationMonth"
+                                class="custom-form-select"
+                                id="expirationMonth"
+                            ></select>
+                        </div>
+                        <div class="w-full">
+                            <select
+                                name="expirationYear"
+                                class="custom-form-select"
+                                id="expirationYear"
+                            ></select>
+                        </div>
+                    </div>
+                    <div class="w-[30%]">
+                        <label for="cardCvv" class="custom-form-label">
+                            CVV
+                        </label>
+                        <input
+                            type="text"
+                            class="custom-form-input"
+                            id="cardCvv"
+                            placeholder=""
+                            inputmode="numeric"
+                            autocomplete="off"
+                            maxlength="3"
+                        />
+                    </div>
+                </div>
+                <button
+                    type="submit"
+                    class="w-full rounded py-[10px] text-white bg-blue-400 hover:shadow-lg duration-300"
+                >
+                    Submit
+                </button>
+            </form>
+        </div>
+    </body>
+</html>
